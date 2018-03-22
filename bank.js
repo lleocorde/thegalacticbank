@@ -127,7 +127,7 @@ if(comm == null) {
               });
             } else {
               sql.run("INSERT INTO artBank (userId, type, level, quantity) VALUES (?, ?, ?, ?)", [msg.author.id, type, lvl, qty]).then(() => {
-                msg.channel.send('Successfully added '+qty+' level '+lvl+' '+type+plr+'.').delete(10000);
+                msg.channel.send('Successfully added level '+lvl+' '+type+plr+' (quantity: '+qty+').').delete(10000);
               })
             }
           }).catch(() => {
@@ -147,7 +147,7 @@ if(comm == null) {
                 if(!row) {
                   msg.reply('you don\`t seem to have level '+lvl+' '+type+'s in your account.');
                 } else {
-                  msg.channel.send('This command is still in development.');
+                  msg.channel.send('This command is still in development. You\'ll be able to remove items eventualy.');
                 }
               })
             }
@@ -207,7 +207,7 @@ if(comm == null) {
             });
           break;
         default:
-          return msg.channel.send('The command **'+comm+'** is not ready.');
+          return msg.channel.send('The command **'+comm+'** is not ready... yet...');
           break;
       };
 
