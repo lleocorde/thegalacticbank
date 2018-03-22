@@ -24,7 +24,7 @@ bot.on('message',(message) => {
 
   if(message.content.startsWith('!test')) {
     message.channel.send('\`\`\`\r\n'
-                         +'\Hal is online and responding.'
+                         +'\The Galactic Bank is online and responding.'
                          +'\r\nReceived message: \''
                          +comm.splice(1)+'\'\r\n'
                          +'\`\`\`'
